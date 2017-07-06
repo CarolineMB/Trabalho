@@ -17,3 +17,8 @@ Instalar
 	executável,após executa-lo, serão pedidos os caminhos de 
 	SenchaCmd-6.5.0-windows-64bit e ext-4.2.1-gpl antes da criação do 
 	projeto
+
+	Links para Download:
+		SenchaCmd-6.5.0 => https://www.sencha.com/products/extjs/cmd-download/
+		
+		ext-4.2.1-gpl => https://github.com/xantus/ext-js-gpl

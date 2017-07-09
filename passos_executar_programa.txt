@@ -1,0 +1,24 @@
+Passos para executar o programa:
+
+Instalar 
+	Visual Studio 2015 Community
+	SQL Server Management Studio 17
+
+	Instalar Plugins no Visual Studio:
+	File - New - Project: Pesquisar por SENCHA e baixar o pacote
+
+	Ainda serão necessários outros dois pacotes:
+
+	SenchaCmd-6.5.0-windows-64bit e ext-4.2.1-gpl
+	Primeiro, deve-se extrair as duas pastas e guardar os caminhos dos 
+	arquivos
+
+	Dentro do SenchaCmd-6.5.0-windows-64bit encontramos apenas um arquivo 
+	executável,após executa-lo, serão pedidos os caminhos de 
+	SenchaCmd-6.5.0-windows-64bit e ext-4.2.1-gpl antes da criação do 
+	projeto
+
+	Links para Download:
+		SenchaCmd-6.5.0 => https://www.sencha.com/products/extjs/cmd-download/
+		
+		ext-4.2.1-gpl => https://github.com/xantus/ext-js-gpl

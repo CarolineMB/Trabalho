@@ -1,240 +1,279 @@
 ﻿Ext.define('LojaDeRoupas.view.funcionario.Edit', {
     extend: 'Ext.Container',
+    alias: 'widget.funcionarioedit',
+    id: 'funcionarioedit',
+
+    requires: [
+      'LojaDeRoupas.control.LookupBox',
+      'LojaDeRoupas.control.DocumentoField',
+      'LojaDeRoupas.control.TelefoneField',
+      'LojaDeRoupas.control.DataField',
+      'LojaDeRoupas.control.ContaField'
+    ],
 
     xtype: 'app-main',
     bodyCls: 'form-input',
-    minWidth: 560,
-    minHeight: 540,
+    minWidth: 575,
+    minHeight: 365,
 
-    layout: {
-        type: 'border'
-    },
 
     initComponent: function () {
         var me = this;
 
         Ext.apply(me, {
             items: [{
-                align: 'center',
-                xtype: 'panel',
+                xtype: 'form',
                 border: false,
-                title: 'Alteracao de Cadastro de Funcionarios',
-                cls: 'titulo',
-                layout: {
-                    type: 'vbox',
-                    align: 'center'
+                layout: 'card',
+
+                fieldDefaults: {
+                    hideEmptyLabel: false,
+                    labelAlign: 'right',
+                    labelWidth: 145,
+                    width: 600
                 },
 
-                width: 1360,
+                items: [
 
-
-                items: [{
-                    xtype: 'displayfield',
-                    value: 'Altere as informacoes necessarias e nao esqueca de salva-las, assim voce continuará fazendo parte da nossa equipe',
-                    layout: 'hbox',
-                    width: 300,
-                    cls: 'ajusta_texto'
-
-                },
                     {
-                        xtype: 'fieldcontainer',
-                        fieldLabel: 'ID',
-                        combineLabels: true,
-                        labelConnector: 'e',
-                        msgTarget: 'side',
+                        xtype: 'panel',
                         layout: 'hbox',
+                        anchor: '100%',
+                        border: false,
 
                         items: [{
-                            xtype: 'textfield',
-                            name: 'ID_Funcionario',
-                            width: 400,
-                            id: 'pesqID',
-                            focusOnShow: true
+                            xtype: 'panel',
+                            layout: 'anchor',
+                            border: false,
+                            padding: '0 8 0 0',
+                            flex: 1,
+                            items: [{
+                                align: 'center',
+                                xtype: 'form',
+                                border: false,
+                                title: 'Editar Cadastro de Funcionarios',
+                                cls: 'titulo',
+                                layout: {
+                                    type: 'vbox',
+                                    align: 'center'
+                                },
+                                items: [{
+                                    xtype: 'displayfield',
+                                    value: 'Altere as informacoes necessarias e nao esqueca de salva-las',
+                                    layout: 'hbox',
+                                    width: 500,
+                                    cls: 'ajusta_texto'
+
+                                },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'ID',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'numberfield',
+                                            name: 'ID_Funcionario',
+                                            width: 400,
+                                            emptyText: 'ID do funcionario'
+                                        }]
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'Nome',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'textfield',
+                                            name: 'Nome_Funcionario',
+                                            width: 400,
+                                            emptyText: 'Nome do funcionario'
+                                        }]
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'Idade',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'numberfield',
+                                            name: 'Idade_Funcionario',
+                                            width: 400,
+                                            emptyText: 'Idade do funcionario'
+                                        }]
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'CPF',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'documentofield',
+                                            name: 'CPF_Funcionario',
+                                            width: 400,
+                                            emptyText: 'CPF do funcionario'
+                                        }]
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'Telefone 1',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'telefonefield',
+                                            name: 'Telefone1_Funcionario',
+                                            width: 400,
+                                            emptyText: 'Primeiro telefone do funcionario'
+                                        }]
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'Telefone 2',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'telefonefield',
+                                            name: 'Telefone2_Funcionario',
+                                            width: 400,
+                                            emptyText: 'Segundo telefone do funcionario'
+                                        }]
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'Cidade',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'textfield',
+                                            name: 'Cidade_Funcionario',
+                                            width: 400,
+                                            emptyText: 'Cidade do funcionario'
+                                        }]
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'Rua',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'textfield',
+                                            name: 'Rua_Funcionario',
+                                            width: 400,
+                                            emptyText: 'Rua do funcionario'
+                                        }]
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'Numero Casa/Ap',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'textfield',
+                                            name: 'Num_End_Funcionario',
+                                            width: 400,
+                                            emptyText: 'Numero capa/ap do funcionario'
+                                        }]
+
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'Email',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'textfield',
+                                            name: 'Email_Funcionario',
+                                            width: 400,
+                                            emptyText: 'Email do funcionario'
+                                        }]
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'Salario',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'numericfield',
+                                            name: 'Salario_Funcionario',
+                                            width: 400,
+                                            emptyText: 'Salario do funcionario'
+                                        }]
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'Nome do Banco',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+
+                                        items: [{
+                                            xtype: 'textfield',
+                                            name: 'Banco_Funcionario',
+                                            width: 400,
+                                            emptyText: 'Nome do banco utilizado pelo funcionario'
+                                        }]
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'Numero da conta',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'contafield',
+                                            name: 'Num_Conta_Funcionario',
+                                            width: 400,
+                                            emptyText: 'Numero da conta utilizada pelo funcionario'
+                                        }]
+                                    },
+                                    {
+                                        cls: 'button_funcionario_edit',
+                                        margin: 20,
+
+
+                                            items: [{
+                                                width: 140,
+                                                margin: 3,
+                                                xtype: 'button',
+                                                name: 'bt_salvar',
+                                                text: 'Salvar'
+                                            },
+                                            {
+                                                width: 140,
+                                                margin: 3,
+                                                xtype: 'button',
+                                                name: 'bt_cancelar',
+                                                text: 'Cancelar'
+                                            },
+                                            {
+                                                width: 140,
+                                                margin: 3,
+                                                xtype: 'button',
+                                                name: 'bt_excluir',
+                                                text: 'Excluir'
+                                            },
+                                        ]
+                                    },
+                                    {
+                                        xtype: 'image',
+                                        src: 'https://imagizer.imageshack.us/v2/476x225q90/923/XWHB40.jpg',
+                                        region: 'south',
+                                        height: 130,
+                                    }
+                                ]
+                            }]
                         }]
-                    },
-                       {
-                           xtype: 'fieldcontainer',
-                           fieldLabel: 'CPF',
-                           combineLabels: true,
-                           labelConnector: 'e',
-                           msgTarget: 'side',
-                           layout: 'hbox',
-
-
-                           items: [{
-                               xtype: 'textfield',
-                               name: 'CPF_Funcionario',
-                               width: 400,
-                               id: 'pesqCPF',
-                               focusOnShow: true
-                           }]
-                       },
-                    {
-                        xtype: 'fieldcontainer',
-                        fieldLabel: 'Nome',
-                        combineLabels: true,
-                        labelConnector: 'e',
-                        msgTarget: 'side',
-                        layout: 'hbox',
-
-                        items: [{
-                            xtype: 'textfield',
-                            name: 'Nome_Funcionario',
-                            width: 400,
-                            id: 'pesqNome',
-                            focusOnShow: true
-                        }]
-                    },
-                    {
-                        xtype: 'fieldcontainer',
-                        fieldLabel: 'Telefone 1',
-                        combineLabels: true,
-                        labelConnector: 'e',
-                        msgTarget: 'side',
-                        layout: 'hbox',
-
-                        items: [{
-                            xtype: 'textfield',
-                            name: 'Telefone1_Funcionario',
-                            width: 400,
-                            id: 'pesqTelefone1',
-                            focusOnShow: true
-                        }]
-                    },
-                    {
-                        xtype: 'fieldcontainer',
-                        fieldLabel: 'Telefone 2',
-                        combineLabels: true,
-                        labelConnector: 'e',
-                        msgTarget: 'side',
-                        layout: 'hbox',
-
-                        items: [{
-                            xtype: 'textfield',
-                            name: 'Telefone2_Funcionario',
-                            width: 400,
-                            id: 'pesqTelefone2',
-                            focusOnShow: true
-                        }]
-                    },
-                    {
-                        xtype: 'fieldcontainer',
-                        fieldLabel: 'Cidade',
-                        combineLabels: true,
-                        labelConnector: 'e',
-                        msgTarget: 'side',
-                        layout: 'hbox',
-
-                        items: [{
-                            xtype: 'textfield',
-                            name: 'Cidade_Funcionario',
-                            width: 400,
-                            id: 'pesqCidade',
-                            focusOnShow: true
-                        }]
-                    },
-                    {
-                        xtype: 'fieldcontainer',
-                        fieldLabel: 'Rua',
-                        combineLabels: true,
-                        labelConnector: 'e',
-                        msgTarget: 'side',
-                        layout: 'hbox',
-
-                        items: [{
-                            xtype: 'textfield',
-                            name: 'Rua_Funcionario',
-                            width: 400,
-                            id: 'pesqRua',
-                            focusOnShow: true
-                        }]
-                    },
-                    {
-                        xtype: 'fieldcontainer',
-                        fieldLabel: 'Numero Casa/Ap',
-                        combineLabels: true,
-                        labelConnector: 'e',
-                        msgTarget: 'side',
-                        layout: 'hbox',
-
-                        items: [{
-                            xtype: 'textfield',
-                            name: 'Num_End_Funcionario',
-                            width: 400,
-                            id: 'pesqNumero',
-                            focusOnShow: true
-                        }]
-
-                    },
-                    {
-                        xtype: 'fieldcontainer',
-                        fieldLabel: 'Email',
-                        combineLabels: true,
-                        labelConnector: 'e',
-                        msgTarget: 'side',
-                        layout: 'hbox',
-
-                        items: [{
-                            xtype: 'textfield',
-                            name: 'Email',
-                            width: 400,
-                            id: 'pesqEmail',
-                            focusOnShow: true
-                        }]
-
-                    },
-                    {
-                        xtype: 'fieldcontainer',
-                        fieldLabel: 'Salario',
-                        combineLabels: true,
-                        labelConnector: 'e',
-                        msgTarget: 'side',
-                        layout: 'hbox',
-
-                        items: [{
-                            xtype: 'textfield',
-                            name: 'Salario',
-                            width: 400,
-                            id: 'pesqSalario',
-                            focusOnShow: true
-                        }]
-
-                    },
-                    {
-                        cls: 'button_funcionario_edit',
-                        margin: 20,
-
-
-                        items: [{
-                            width: 145,
-                            margin: 3,
-                            xtype: 'button',
-                            name: 'bt_salvar',
-                            text: 'Salvar'
-                        },
-                            {
-                                width: 145,
-                                margin: 3,
-                                xtype: 'button',
-                                name: 'bt_cancelar',
-                                text: 'Cancelar'
-                            },
-                            {
-                                width: 145,
-                                margin: 3,
-                                xtype: 'button',
-                                name: 'bt_excluir',
-                                text: 'Exclui'
-                            }
-                        ]
-                    },
-                    {
-                        xtype: 'image',
-                        src: 'https://imagizer.imageshack.us/v2/476x225q90/923/XWHB40.jpg',
-                        region: 'south',
-                        height: 200,
                     }
-
                 ]
 
             }]

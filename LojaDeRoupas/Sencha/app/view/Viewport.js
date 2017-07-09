@@ -3,7 +3,7 @@ Ext.define('LojaDeRoupas.view.Viewport', {
     requires:[
         'Ext.layout.container.Fit',
         //'LojaDeRoupas.view.Main'
-        'LojaDeRoupas.view.cliente.Create',      
+        'LojaDeRoupas.view.cliente.List',
     ],
 
     layout: {

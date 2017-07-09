@@ -3,10 +3,13 @@
 
     fields: [
            { name: 'ID_Roupa', type: 'int' },
+           { name: 'ID_Fornecedor', type: 'int' },
+           { name: 'Codigo_Roupa', type: 'string' },
            { name: 'Tamanho_Roupa', type: 'string' },
-           { name: 'Tipo_Roupa', type: 'string' },
-           { name: 'Informacoes_Adicionais', type: 'string' },
-           { name: 'ID_Fornecedor', type: 'string' }          
+           { name: 'Descricao_Roupa', type: 'string' },
+           { name: 'Preco_Custo_Roupa', type: 'float' },
+           { name: 'Preco_Venda_Roupa', type: 'float' },
+           { name: 'Informacoes_Adicionais', type: 'string' }            
     ],
 
     /*

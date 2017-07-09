@@ -10,9 +10,9 @@
            { name: 'Rua_Fornecedor', type: 'string' },
            { name: 'Num_End_Fornecedor', type: 'int' },
            { name: 'Email_Fornecedor', type: 'string' },
-           { name: 'Numero_Conta', type: 'string' },
-           { name: 'Banco_Conta', type: 'strinh' },
-           { name: 'Tipo_Roupa', type: 'string' }
+           { name: 'Banco_Fornecedor', type: 'strinh' },
+           { name: 'Num_Conta_Fornecedor', type: 'string' },
+           { name: 'Descricao_Roupa_Fornecedor', type: 'string' }
     ],
 
 

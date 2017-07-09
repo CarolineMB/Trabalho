@@ -8,7 +8,7 @@
             { name: 'Telefone2_Cliente', type: 'string'},
             { name: 'Cidade_Cliente', type: 'string'},
             { name: 'Rua_Cliente', type: 'string'},
-            { name: 'Num_End_cliente', type: 'string'},
+            { name: 'Num_End_Cliente', type: 'string'},
             { name: 'Email_Cliente', type: 'string'}
         ],
 

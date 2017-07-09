@@ -1,122 +1,178 @@
 ﻿Ext.define('LojaDeRoupas.view.cliente.View', {
     extend: 'Ext.Container',
+    alias: 'widget.clienteview',
+    id: 'clienteview',
 
     xtype: 'app-main',
     bodyCls: 'form-input',
-    minWidth: 560,
-    minHeight: 540,
-
-    layout: {
-        type: 'border'
-    },
+    minWidth: 575,
+    minHeight: 365,
 
     initComponent: function () {
         var me = this;
 
+
         Ext.apply(me, {
             items: [{
-                align: 'center',
-                xtype: 'panel',
+                xtype: 'form',
                 border: false,
-                title: 'Cadastro de Fornecedores',
-                cls: 'titulo',
-                layout: {
-                    type: 'vbox',
-                    align: 'center'
+                layout: 'card',
+
+                fieldDefaults: {
+                    hideEmptyLabel: false,
+                    labelAlign: 'right',
+                    labelWidth: 145,
+                    width: 600
                 },
 
-                width: 1360,
+                items: [
 
-
-                items: [{
-                    xtype: 'displayfield',
-                    value: 'Cadastre as Informacoes do fornecedor preenchendo os itens abaixo',
-                    layout: 'hbox',
-                    width: 300,
-                    cls: 'ajusta_texto'
-
-                },
-                    {                       
-                        width: 300,
-                        xtype: 'displayfield',
-                        name: 'CPF_Cliente',
-                        fieldLabel: 'CPF',
-                        value: 1,
-                    },
                     {
-                        width: 300,
-                        xtype: 'displayfield',
-                        name: 'Nome_Cliente',
-                        fieldLabel: 'Nome',
+                        xtype: 'panel',
                         layout: 'hbox',
-                    },
-                    {
-                        width: 300,
-                        xtype: 'displayfield',
-                        name: 'Telefone1_Cliente',
-                        fieldLabel: 'Telefone 1',
-                        layout: 'hbox',
-                    },
-                    {
-                        width: 300,
-                        xtype: 'displayfield',
-                        name: 'Telefone2_Cliente',
-                        fieldLabel: 'Telefone 2',
-                        layout: 'hbox',
-                    },
-                    {
-                        width: 300,
-                        xtype: 'displayfield',
-                        name: 'Cidade_Cliente',
-                        fieldLabel: 'Cidade',
-                        layout: 'hbox',
-                    },
-                    {
-                        width: 300,
-                        xtype: 'displayfield',
-                        name: 'Rua_Cliente',
-                        fieldLabel: 'Rua',
-                        layout: 'hbox',
-                    },
-                    {
-                        width: 300,
-                        xtype: 'displayfield',
-                        name: 'tx_numeroEnd',
-                        fieldLabel: 'Num_End_cliente',
-                        layout: 'hbox',
-
-                    },
-                    {
-                        width: 300,
-                        xtype: 'displayfield',
-                        name: 'Email_Cliente',
-                        fieldLabel: 'Email',
-                        layout: 'hbox',
-                    },
-                   
-                    {
-                        cls: 'button_cliente.view',
-                        margin: 20,
-
+                        anchor: '100%',
+                        border: false,
 
                         items: [{
-                            width: 140,
-                            margin: 3,
-                            xtype: 'button',
-                            name: 'bt_sair',
-                            text: 'Sair'
-                        }
-                        ]
-                    },
-                    {
-                        xtype: 'image',
-                        src: 'https://imagizer.imageshack.us/v2/476x225q90/923/XWHB40.jpg',
-                        region: 'south',
-                        height: 150,
+                            xtype: 'panel',
+                            layout: 'anchor',
+                            border: false,
+                            padding: '0 8 0 0',
+                            flex: 1,
+                            items: [{
+                                align: 'center',
+                                xtype: 'form',
+                                border: false,
+                                title: 'Informações de Clientes',
+                                cls: 'titulo',
+                                layout: {
+                                    type: 'vbox',
+                                    align: 'center'
+                                },
+                                items: [{
+                                    xtype: 'displayfield',
+                                    value: 'Informações de Clientes',
+                                    layout: 'hbox',
+                                    width: 500,
+                                    cls: 'ajusta_texto'
+
+                                },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'CPF',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'displayfield',
+                                            name: 'CPF_Cliente'
+                                        }]
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'Nome',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'displayfield',
+                                            name: 'Nome_Cliente'
+                                        }]
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'Telefone 1',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'displayfield',
+                                            name: 'Telefone1_Cliente'
+                                        }]
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'Telefone 2',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'displayfield',
+                                            name: 'Telefone2_Cliente'
+                                        }]
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'Cidade',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'displayfield',
+                                            name: 'Cidade_Cliente'
+                                        }]
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'Rua',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'displayfield',
+                                            name: 'Rua_Cliente'
+                                        }]
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'Numero Casa/Ap',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'displayfield',
+                                            name: 'Num_End_Cliente'
+                                        }]
+
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'Email',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'displayfield',
+                                            name: 'Email_Cliente'
+                                        }]
+
+                                    },
+                                    {
+                                        cls: 'button_cliente_view',
+                                        margin: 20,
+
+
+                                        items: [{
+                                            width: 140,
+                                            margin: 3,
+                                            xtype: 'button',
+                                            name: 'bt_voltar',
+                                            text: 'Voltar'
+                                        }]
+                                    },
+                                    {
+                                        xtype: 'image',
+                                        src: 'https://imagizer.imageshack.us/v2/476x225q90/923/XWHB40.jpg',
+                                        region: 'south',
+                                        height: 180,
+                                    }
+
+                                ]
+
+                            }]
+                        }]
                     }
-
                 ]
-
             }]
 
         });

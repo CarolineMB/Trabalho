@@ -4,15 +4,18 @@
 
     fields: [
             { name: 'ID_Funcionario', type: 'int' },
-            { name: 'CPF_Funcionario', type: 'string'},
-            { name: 'Nome_Funcionario', type: 'string'},
+            { name: 'Nome_Funcionario', type: 'string' },
+            { name: 'Idade_Funcionario', type: 'int' },
+            { name: 'CPF_Funcionario', type: 'string' },
             { name: 'Telefone1_Funcionario', type: 'string'},
             { name: 'Telefone2_Funcionario', type: 'string'},
             { name: 'Cidade_Funcionario', type: 'string'},
             { name: 'Rua_Funcionario', type: 'string'},
             { name: 'Num_End_Funcionario', type: 'int'},
             { name: 'Email', type: 'string'},
-            { name: 'Salario', type: 'float'}
+            { name: 'Salario', type: 'float' },
+            { name: 'Banco_Funcionario', type: 'string'},
+            { name: 'Num_Conta_Funcionario', type: 'string'}
         ],
 
         idProperty: 'id_funcionario',

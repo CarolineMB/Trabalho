@@ -77,7 +77,7 @@ Ext.define('LojaDeRoupas.view.Main', {
                 
                 {
                     xtype: 'image',
-                    src: 'http://1.bp.blogspot.com/-Fj-bnCgQNh8/VduLxJW0YyI/AAAAAAAACCg/DcOyCziQAaQ/s1600/magasin-stradivarius-paris-rivoli-2.jpg',
+                    src: 'http://www.iodice.com.br/media/wysiwyg/2015_08_Lojas.jpg',
                     region: 'south',
                     height: 400,
                 },

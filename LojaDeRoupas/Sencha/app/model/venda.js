@@ -3,10 +3,12 @@
 
     fields: [
            { name: 'ID_Venda', type: 'int' },
-           { name: 'data', type: 'date', dateFormat: 'Y-m-d\\TH:i:s' },
-           { name: 'ID_Funcionario', type: 'int' },
            { name: 'ID_Roupa', type: 'int' },
-           { name: 'CPF_Cliente', type: 'string' }
+           { name: 'ID_Funcionario', type: 'int' },
+           { name: 'CPF_Cliente', type: 'string' },
+           { name: 'Data_Venda', type: 'date', dateFormat: 'Y-m-d\\TH:i:s' },
+           { name: 'Quantidade_Roupa', type: 'int' },
+           { name: 'Valor_Venda', type: 'float' }
     ],
 
     /*

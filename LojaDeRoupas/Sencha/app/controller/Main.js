@@ -39,7 +39,7 @@ Ext.define('LojaDeRoupas.controller.Main', {
                         tap: 'pushViewFunction'
                     }
                 }
-        },
+        
 
             pushViewFunction: function() {
             Ext.Viewport.animateActiveItem({xtype: 'Eligibelity'}, {type:'slide', direction: 'left'});

@@ -1,218 +1,218 @@
 ﻿Ext.define('LojaDeRoupas.view.cliente.Edit', {
     extend: 'Ext.Container',
+    alias: 'widget.clienteedit',
+    id: 'clienteedit',
+
+    requires: [
+        'LojaDeRoupas.control.LookupBox',
+        'LojaDeRoupas.control.DocumentoField',
+        'LojaDeRoupas.control.TelefoneField',
+        'LojaDeRoupas.control.DataField'
+    ],
+
 
     xtype: 'app-main',
     bodyCls: 'form-input',
-    minWidth: 560,
-    minHeight: 540,
-
-    layout: {
-        type: 'border'
-    },
+    minWidth: 575,
+    minHeight: 365,
 
     initComponent: function () {
         var me = this;
 
+
         Ext.apply(me, {
             items: [{
-                align: 'center',
-                xtype: 'panel',
+                xtype: 'form',
                 border: false,
-                title: 'Alteracao de Cadastro de Clientes',
-                cls: 'titulo',
-                layout: {
-                    type: 'vbox',
-                    align: 'center'
+                layout: 'card',
+
+                fieldDefaults: {
+                    hideEmptyLabel: false,
+                    labelAlign: 'right',
+                    labelWidth: 145,
+                    width: 600
                 },
 
-                width: 1360,
+                items: [
 
-
-                items: [{
-                    xtype: 'displayfield',
-                    value: 'Altere as informacoes necessarias e nao esqueca de salva-las, assim voce continuara recebendo nossas novidades por email',
-                    layout: 'hbox',
-                    width: 300,
-                    cls: 'ajusta_texto'
-
-                },
                     {
-                        xtype: 'fieldcontainer',
-                        fieldLabel: 'CPF',
-                        combineLabels: true,
-                        labelConnector: 'e',
-                        msgTarget: 'side',
+                        xtype: 'panel',
                         layout: 'hbox',
-
-
-                        items: [{
-                            xtype: 'textfield',
-                            name: 'CPF_Cliente',
-                            width: 400,
-                            id: 'pesqCPF',
-                            focusOnShow: true
-                        }]
-                    },
-
-                    {
-                        xtype: 'fieldcontainer',
-                        fieldLabel: 'Nome',
-                        combineLabels: true,
-                        labelConnector: 'e',
-                        msgTarget: 'side',
-                        layout: 'hbox',
+                        anchor: '100%',
+                        border: false,
 
                         items: [{
-                            xtype: 'textfield',
-                            name: 'Nome_Cliente',
-                            width: 400,
-                            id: 'pesqNome',
-                            focusOnShow: true
-                        }]
-                    },
-                    {
-                        xtype: 'fieldcontainer',
-                        fieldLabel: 'Telefone 1',
-                        combineLabels: true,
-                        labelConnector: 'e',
-                        msgTarget: 'side',
-                        layout: 'hbox',
-
-                        items: [{
-                            xtype: 'textfield',
-                            name: 'Telefone1_Cliente',
-                            width: 400,
-                            id: 'pesqTelefone1',
-                            focusOnShow: true
-                        }]
-                    },
-                    {
-                        xtype: 'fieldcontainer',
-                        fieldLabel: 'Telefone 2',
-                        combineLabels: true,
-                        labelConnector: 'e',
-                        msgTarget: 'side',
-                        layout: 'hbox',
-
-                        items: [{
-                            xtype: 'textfield',
-                            name: 'Telefone2_Cliente',
-                            width: 400,
-                            id: 'pesqTelefone2',
-                            focusOnShow: true
-                        }]
-                    },
-                    {
-                        xtype: 'fieldcontainer',
-                        fieldLabel: 'Cidade',
-                        combineLabels: true,
-                        labelConnector: 'e',
-                        msgTarget: 'side',
-                        layout: 'hbox',
-
-                        items: [{
-                            xtype: 'textfield',
-                            name: 'Cidade_Cliente',
-                            width: 400,
-                            id: 'pesqCidade',
-                            focusOnShow: true
-                        }]
-                    },
-                    {
-                        xtype: 'fieldcontainer',
-                        fieldLabel: 'Rua',
-                        combineLabels: true,
-                        labelConnector: 'e',
-                        msgTarget: 'side',
-                        layout: 'hbox',
-
-                        items: [{
-                            xtype: 'textfield',
-                            name: 'Rua_Cliente',
-                            width: 400,
-                            id: 'pesqRua',
-                            focusOnShow: true
-                        }]
-                    },
-                    {
-                        xtype: 'fieldcontainer',
-                        fieldLabel: 'Numero Casa/Ap',
-                        combineLabels: true,
-                        labelConnector: 'e',
-                        msgTarget: 'side',
-                        layout: 'hbox',
-
-                        items: [{
-                            xtype: 'textfield',
-                            name: 'Num_End_cliente',
-                            width: 400,
-                            id: 'pesqNumero',
-                            focusOnShow: true
-                        }]
-
-                    },
-                    {
-                        xtype: 'fieldcontainer',
-                        fieldLabel: 'Email',
-                        combineLabels: true,
-                        labelConnector: 'e',
-                        msgTarget: 'side',
-                        layout: 'hbox',
-
-                        items: [{
-                            xtype: 'textfield',
-                            name: 'Email_Cliente',
-                            width: 400,
-                            id: 'pesqEmail',
-                            focusOnShow: true
-                        }]
-
-                    },
-                    {
-                        cls: 'button_cliente_edit',
-                        margin: 15,
-                        items: [{
-                            width: 145,
-                            margin: 3,
-                            xtype: 'button',
-                            name: 'bt_salvar',
-                            text: 'Salvar'
-                        },
-                            {
-                                width: 145,
-                                margin: 3,
-                                xtype: 'button',
-                                name: 'bt_cancelar',
-                                text: 'Cancelar'
-                            },
-                            {
-                                width: 145,
-                                margin: 3,
-                                xtype: 'button',
-                                name: 'bt_excluir',
-                                text: 'Exclui',
-
-                                layout: 'card',
+                            xtype: 'panel',
+                            layout: 'anchor',
+                            border: false,
+                            padding: '0 8 0 0',
+                            flex: 1,
+                            items: [{
+                                align: 'center',
+                                xtype: 'form',
+                                border: false,
+                                title: 'Editar Cadastro de Clientes',
+                                cls: 'titulo',
+                                layout: {
+                                    type: 'vbox',
+                                    align: 'center'
+                                },
                                 items: [{
-                                    xtype: 'panel',
-                                    id: 'panel1',
-                                }, {
-                                    xtype: 'panel',
-                                    id: 'panel2',
-                                }]
-                            }
-                        ]
-                    },
-                    {
-                        margin: 50,
-                        xtype: 'image',
-                        src: 'https://imagizer.imageshack.us/v2/476x225q90/923/XWHB40.jpg',
-                        region: 'south',
-                        height: 200,
+                                    xtype: 'displayfield',
+                                    value: 'Altere as informacoes necessarias e nao esqueca de salva-las',
+                                    layout: 'hbox',
+                                    width: 500,
+                                    cls: 'ajusta_texto'
+
+                                },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'CPF',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'documentofield',
+                                            name: 'CPF_Cliente',
+                                            width: 400,
+                                            tipoDocumento: 1,
+                                            emptyText: 'CPF do cliente'
+                                        }]
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'Nome',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'textfield',
+                                            name: 'Nome_Cliente',
+                                            width: 400,
+                                            emptyText: 'Nome do cliente'
+                                        }]
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'Telefone 1',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'telefonefield',
+                                            name: 'Telefone1_Cliente',
+                                            width: 400,
+                                            emptyText: 'Primeiro telefone do cliente'
+                                        }]
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'Telefone 2',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'telefonefield',
+                                            name: 'Telefone2_Cliente',
+                                            width: 400,
+                                            emptyText: 'Segundo telefone do cliente'
+                                        }]
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'Cidade',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'textfield',
+                                            name: 'Cidade_Cliente',
+                                            width: 400,
+                                            emptyText: 'Cidade do cliente'
+                                        }]
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'Rua',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'textfield',
+                                            name: 'Rua_Cliente',
+                                            width: 400,
+                                            emptyText: 'Rua do cliente'
+                                        }]
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'Numero Casa/Ap',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'textfield',
+                                            name: 'Num_End_Cliente',
+                                            width: 400,
+                                            emptyText: 'Numero casa/ap do cliente'
+                                        }]
+
+                                    },
+                                    {
+                                        xtype: 'fieldcontainer',
+                                        fieldLabel: 'Email',
+                                        combineLabels: true,
+                                        layout: 'hbox',
+
+                                        items: [{
+                                            xtype: 'textfield',
+                                            name: 'Email_Cliente',
+                                            width: 400,
+                                            emptyText: 'Email do cliente'
+                                        }]
+
+                                    },
+                                    {
+                                        cls: 'button_cliente_edit',
+                                        margin: 20,
+
+
+                                        items: [{
+                                                width: 140,
+                                                margin: 3,
+                                                xtype: 'button',
+                                                name: 'bt_salvar',
+                                                text: 'Salvar'
+                                            },
+                                            {
+                                                width: 140,
+                                                margin: 3,
+                                                xtype: 'button',
+                                                name: 'bt_cancelar',
+                                                text: 'Cancelar'
+                                            },
+                                            {
+                                                width: 145,
+                                                margin: 3,
+                                                xtype: 'button',
+                                                name: 'bt_excluir',
+                                                text: 'Exclui'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        xtype: 'image',
+                                        src: 'https://imagizer.imageshack.us/v2/476x225q90/923/XWHB40.jpg',
+                                        region: 'south',
+                                        height: 180,
+                                    }
+
+                                ]
+
+                            }]
+                        }]
                     }
-
                 ]
-
             }]
 
         });

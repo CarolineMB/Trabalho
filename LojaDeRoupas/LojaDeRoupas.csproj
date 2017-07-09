@@ -51,6 +51,34 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -92,7 +120,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Sencha\app\controller\cliente.js" />
+    <Content Include="Sencha\app\controller\Inicial.js" />
+    <Content Include="Sencha\app\control\ContaField.js" />
+    <Content Include="Sencha\app\control\DataField.js" />
+    <Content Include="Sencha\app\control\DocumentoField.js" />
+    <Content Include="Sencha\app\control\LookupBox.js" />
+    <Content Include="Sencha\app\control\MenuBox.js" />
+    <Content Include="Sencha\app\control\MenuButton.js" />
+    <Content Include="Sencha\app\control\NumericField.js" />
+    <Content Include="Sencha\app\control\SearchBox.js" />
+    <Content Include="Sencha\app\control\SearchEdit.js" />
+    <Content Include="Sencha\app\control\TelefoneField.js" />
+    <Content Include="Sencha\app\view\cliente\List.js" />
+    <Content Include="Sencha\app\view\fornecedor\List.js" />
+    <Content Include="Sencha\app\view\funcionario\List.js" />
+    <Content Include="Sencha\app\view\funcionario\View.js" />
+    <Content Include="Sencha\app\view\Inicial.js" />
     <Content Include="Sencha\app\model\cliente.js" />
     <Content Include="Global.asax" />
     <Content Include="Model1.Context.tt">
@@ -110,16 +156,20 @@
     <Content Include="Sencha\app\model\funcionario.js" />
     <Content Include="Sencha\app\model\roupa.js" />
     <Content Include="Sencha\app\model\venda.js" />
+    <Content Include="Sencha\app\Utils.js" />
     <Content Include="Sencha\app\view\cliente\Create.js" />
     <Content Include="Sencha\app\view\cliente\Edit.js" />
     <Content Include="Sencha\app\view\cliente\View.js" />
     <Content Include="Sencha\app\view\fornecedor\Create.js" />
     <Content Include="Sencha\app\view\fornecedor\Edit.js" />
+    <Content Include="Sencha\app\view\fornecedor\View.js" />
     <Content Include="Sencha\app\view\funcionario\Create.js" />
     <Content Include="Sencha\app\view\funcionario\Edit.js" />
     <Content Include="Sencha\app\view\login\Login.js" />
     <Content Include="Sencha\app\view\roupa\Create.js" />
     <Content Include="Sencha\app\view\roupa\Edit.js" />
+    <Content Include="Sencha\app\view\roupa\List.js" />
+    <Content Include="Sencha\app\view\roupa\View.js" />
     <Content Include="Sencha\app\view\venda\Create.js" />
     <Content Include="Sencha\app\view\venda\Edit.js" />
     <Content Include="Sencha\ext\packages\ext-theme-classic-sandbox\build\resources\images\logo.jpg" />
@@ -147,6 +197,10 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlDatabaseSetup.cs" />
+    <Compile Include="SqlServerUnitTest1.cs">
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -161,6 +215,7 @@
     <Content Include="Sencha\sass\src\view\cliente\Edit.scss" />
     <Content Include="Sencha\sass\src\view\funcionario\Create.scss" />
     <Content Include="Sencha\sass\src\view\funcionario\Edit.scss" />
+    <Content Include="app.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -4848,6 +4903,10 @@
     <Folder Include="Api\App_Data\" />
     <Folder Include="Api\Controllers\" />
     <Folder Include="Api\Models\" />
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -4882,6 +4941,11 @@
       <UserProperties senchaNature="True" />
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="'$(SQLDBExtensionsRefPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="'$(SQLDBExtensionsRefPath)' == ''" />
+  <PropertyGroup>
+    <SsdtUnitTestVersion>2.0</SsdtUnitTestVersion>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
